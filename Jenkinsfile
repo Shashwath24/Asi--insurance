@@ -44,4 +44,4 @@ $dockerHubUser/$containerName:$tag"
  }
  }
  }
-}
+ }
