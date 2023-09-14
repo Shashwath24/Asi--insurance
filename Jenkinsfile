@@ -27,7 +27,7 @@ userRemoteConfigs: [[url: 'https://github.com/Shashwath24/Asi--insurance.git']])
  stage("push image to dockerhub"){
  steps{
  withCredentials([usernamePassword(credentialsId:
-'shashwath24', passwordVariable: 'Mr@021998', usernameVariable:
+'dockerHubAccount', passwordVariable: 'dockerPassword', usernameVariable:
 'dockerUser')]) {
  sh "docker login -u $dockerUser -p $dockerPassword"
  sh "docker push $dockerUser/$containerName:$tag"
